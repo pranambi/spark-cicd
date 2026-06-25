@@ -4,7 +4,7 @@ from job.word_count import count_words
 
 def test_basic_word_count():
     result = count_words("the fox the")
-    assert result == {"the": 2, "fox": 1}
+    assert result == {"the": 99, "fox": 1}  # wrong value
 
 
 def test_case_insensitive():
