@@ -30,7 +30,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           VERSION="v1.0.$(date +%Y%m%d%H%M%S)"
-          IMAGE="psnambiar/spark-wordcount"
+          IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/spark-wordcount"
           docker build -t $IMAGE:$VERSION -t $IMAGE:latest .
           docker push $IMAGE:$VERSION
           docker push $IMAGE:latest
