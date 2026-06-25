@@ -20,3 +20,13 @@ def test_single_word():
 def test_empty_string():
     result = count_words("")
     assert result == {}
+
+
+def test_multiple_spaces():
+    result = count_words("spark  hadoop  spark")
+    assert result == {"spark": 2, "hadoop": 1}
+
+
+def test_numbers_as_words():
+    result = count_words("1 2 1")
+    assert result == {"1": 2, "2": 1}
