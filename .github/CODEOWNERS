@@ -1,0 +1,8 @@
+# Default owner for all files
+* @pranambi
+
+# CI/CD pipeline changes require owner review
+/.github/ @pranambi
+
+# PySpark job changes require owner review
+/job/ @pranambi
